@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Cookies.js/1.2.1/cookies.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<title></title>
+</head>
+<body>
+	<div id="box">
+	</div>
+	<a href="index.html">Give me your name</a>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		console.log(Cookies.get("user"));
+
+		function getCookie(){
+			var check = Cookies.get("user");
+			if (check !== undefined){
+				alert("Welcome again " + check);
+			}
+
+			else {
+				function steve(){
+					var div = $("#box");
+					div.animate({height: '15rem'});
+				}	
+				steve();
+			}
+		}	
+		getCookie();
+
+
+	</script>
+</body>
+</html>
